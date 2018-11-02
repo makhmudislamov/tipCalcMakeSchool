@@ -182,6 +182,9 @@
                                 <state key="normal" title="RESET">
                                     <color key="titleColor" name="tcWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l6g-Wo-fUL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="tcOffWhite"/>
@@ -210,6 +213,7 @@
                         <outlet property="headerView" destination="uae-ci-apE" id="czV-PM-aTR"/>
                         <outlet property="inputCardView" destination="eXO-mB-9PJ" id="uVo-5K-bCB"/>
                         <outlet property="outputCardView" destination="oJb-gA-odJ" id="DvS-He-zYq"/>
+                        <outlet property="resetButton" destination="iSN-oi-iTz" id="8eZ-b3-EUz"/>
                         <outlet property="themeSwitch" destination="G7b-Na-1Kw" id="yyR-ZN-eNH"/>
                         <outlet property="tipAmountLabel" destination="pRP-RK-C4p" id="4OK-24-Yvr"/>
                         <outlet property="tipAmountTitleLabel" destination="jP7-27-Y4C" id="IN1-MN-KJW"/>

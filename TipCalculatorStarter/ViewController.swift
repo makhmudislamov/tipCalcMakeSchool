@@ -29,12 +29,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalAmountTitleLable: UILabel!
     @IBOutlet weak var totalAmountLabel: UILabel!
     
+    //    BUTTON OUTLET
+    @IBOutlet weak var resetButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     
+    //    IB ACTIONS
+//    change the theme
     @IBAction func themeToggled(_ sender: UISwitch) {
         if sender.isOn {
             print("switch toggled on")
@@ -43,7 +48,12 @@ class ViewController: UIViewController {
         }
     }
     
+//    change tip percentage
     @IBAction func tipPercentageChanged(_ sender: UISegmentedControl) {
+    }
+    
+//    reset input button
+    @IBAction func resetButtonTapped(_ sender: Any) {
     }
     
     

@@ -115,38 +115,43 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJb-gA-odJ">
                                 <rect key="frame" x="15" y="356" width="345" height="203"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="I5G-6Z-GBv">
-                                        <rect key="frame" x="22.5" y="60" width="354" height="83"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="I5G-6Z-GBv">
+                                        <rect key="frame" x="22" y="60" width="301" height="83"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="199" translatesAutoresizingMaskIntoConstraints="NO" id="y7I-NB-GMU">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="y7I-NB-GMU">
+                                                <rect key="frame" x="0.0" y="0.0" width="301" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jP7-27-Y4C">
-                                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="110" id="i7P-rm-Q5i"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                         <color key="textColor" name="tcCharcoal"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRP-RK-C4p">
-                                                        <rect key="frame" x="297.5" y="0.0" width="56.5" height="24"/>
+                                                        <rect key="frame" x="145" y="0.0" width="156" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <color key="textColor" name="tcBlack"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="199" translatesAutoresizingMaskIntoConstraints="NO" id="IAz-uK-eji">
-                                                <rect key="frame" x="0.0" y="59" width="354" height="24"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="IAz-uK-eji">
+                                                <rect key="frame" x="0.0" y="59" width="301" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUz-8n-oXr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="110" id="rqv-74-iCT"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                         <color key="textColor" name="tcCharcoal"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-Lk-ggL">
-                                                        <rect key="frame" x="297.5" y="0.0" width="56.5" height="24"/>
+                                                        <rect key="frame" x="145" y="0.0" width="156" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                         <color key="textColor" name="tcBlack"/>
                                                         <nil key="highlightedColor"/>
@@ -154,9 +159,18 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="IAz-uK-eji" firstAttribute="width" secondItem="I5G-6Z-GBv" secondAttribute="width" id="0r4-JR-eEf"/>
+                                            <constraint firstItem="y7I-NB-GMU" firstAttribute="width" secondItem="I5G-6Z-GBv" secondAttribute="width" id="Iqd-Ht-Qa6"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="tcWhite"/>
+                                <constraints>
+                                    <constraint firstItem="I5G-6Z-GBv" firstAttribute="centerY" secondItem="oJb-gA-odJ" secondAttribute="centerY" id="NVx-kh-xpb"/>
+                                    <constraint firstItem="I5G-6Z-GBv" firstAttribute="leading" secondItem="oJb-gA-odJ" secondAttribute="leading" constant="22" id="e17-7x-a7w"/>
+                                    <constraint firstAttribute="trailing" secondItem="I5G-6Z-GBv" secondAttribute="trailing" constant="22" id="gKE-Wp-xuQ"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSN-oi-iTz">
                                 <rect key="frame" x="15" y="583" width="345" height="60"/>

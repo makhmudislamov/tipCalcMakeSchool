@@ -33,6 +33,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSN-oi-iTz">
                                 <rect key="frame" x="15" y="583" width="345" height="60"/>
+                                <color key="backgroundColor" name="tcDarkBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="C0l-ET-wT4"/>
                                 </constraints>
@@ -66,6 +67,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="tcDarkBlue">
+            <color red="0.16899999976158142" green="0.17599999904632568" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="tcOffWhite">
             <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

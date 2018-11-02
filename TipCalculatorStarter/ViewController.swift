@@ -15,7 +15,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var themeSwitch: UISwitch!
+    
+    //    INPUT CARD OUTLETS
     @IBOutlet weak var inputCardView: UIView!
+    @IBOutlet weak var billAmountTextField: UITextField!
+    @IBOutlet weak var tipPercentSegmentedControl: UISegmentedControl!
+    
+    
+    //    OUTPUT CARD OUTLETS
+    @IBOutlet weak var outputCardView: UIView!
+    @IBOutlet weak var tipAmountTitleLabel: UILabel!
+    @IBOutlet weak var tipAmountLabel: UILabel!
+    @IBOutlet weak var totalAmountTitleLable: UILabel!
+    @IBOutlet weak var totalAmountLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

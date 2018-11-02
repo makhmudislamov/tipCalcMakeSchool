@@ -203,10 +203,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="billAmountTextField" destination="r0E-Zo-ECB" id="kEF-qy-fp3"/>
                         <outlet property="headerView" destination="uae-ci-apE" id="czV-PM-aTR"/>
                         <outlet property="inputCardView" destination="eXO-mB-9PJ" id="uVo-5K-bCB"/>
+                        <outlet property="outputCardView" destination="oJb-gA-odJ" id="DvS-He-zYq"/>
                         <outlet property="themeSwitch" destination="G7b-Na-1Kw" id="yyR-ZN-eNH"/>
+                        <outlet property="tipAmountLabel" destination="pRP-RK-C4p" id="4OK-24-Yvr"/>
+                        <outlet property="tipAmountTitleLabel" destination="jP7-27-Y4C" id="IN1-MN-KJW"/>
+                        <outlet property="tipPercentSegmentedControl" destination="G3b-Hb-8Gy" id="2Xc-bV-Keh"/>
                         <outlet property="titleLabel" destination="VFO-4g-ps9" id="VoW-sh-UVs"/>
+                        <outlet property="totalAmountLabel" destination="O1T-Lk-ggL" id="NaA-PX-MLQ"/>
+                        <outlet property="totalAmountTitleLable" destination="QUz-8n-oXr" id="rFS-fP-xW3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

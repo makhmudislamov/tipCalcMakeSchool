@@ -62,9 +62,10 @@ class ViewController: UIViewController {
             // 3
             let totalAmount = roundedBillAmount + roundedTipAmount
             
-            print("Bill Amount: \(roundedBillAmount)")
-            print("Tip Amount: \(roundedTipAmount)")
-            print("Total Amount: \(totalAmount)")
+            // Update UI
+            self.billAmountTextField.text = String(format: "%.2f", roundedBillAmount)
+            self.tipAmountLabel.text = String(format: "%.2f", roundedTipAmount)
+            self.totalAmountLabel.text = String(format: "%.2f", totalAmount)
         }
     }
     

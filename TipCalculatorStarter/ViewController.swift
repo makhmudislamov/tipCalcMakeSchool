@@ -32,41 +32,53 @@ class ViewController: UIViewController {
     //    BUTTON OUTLET
     @IBOutlet weak var resetButton: UIButton!
     
+   
+//    calc logic function
+    func calculate() {
+        // dismiss keyboard
+        if self.billAmountTextField.isFirstResponder {
+            self.billAmountTextField.resignFirstResponder()
+        }
+        
+        guard let billAmountText = self.billAmountTextField.text,
+            let billAmount = Double(billAmountText) else {
+                return
+        }
+        
+//        segmented control is changed
+        let roundedBillAmount = (100 * billAmount).rounded() / 100
+        
+        let tipPercent: Double
+        switch tipPercentSegmentedControl.selectedSegmentIndex {
+        case 0:
+            tipPercent = 0.15
+        case 1:
+            tipPercent = 0.18
+        case 2:
+            tipPercent = 0.20
+        default:
+            preconditionFailure("Unexpected index.")
+        }
+        
+        
+        let tipAmount = roundedBillAmount * tipPercent
+        let roundedTipAmount = (100 * tipAmount).rounded() / 100
+        
+        let totalAmount = roundedBillAmount + roundedTipAmount
+        
+        // Update UI
+        self.billAmountTextField.text = String(format: "%.2f", roundedBillAmount)
+        self.tipAmountLabel.text = String(format: "%.2f", roundedTipAmount)
+        self.totalAmountLabel.text = String(format: "%.2f", totalAmount)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        
         billAmountTextField.calculateButtonAction = {
-            // dismiss keyboard if it's displayed
-            if self.billAmountTextField.isFirstResponder {
-                self.billAmountTextField.resignFirstResponder()
-            }
-            
-            // 1
-            guard let billAmountText = self.billAmountTextField.text,
-//                converting string to double
-                let billAmount = Double(billAmountText) else {
-                    return
-            }
-            
-//              rounding the bill amount to nearest 2 decimal places
-            let roundedBillAmount = (100 * billAmount).rounded() / 100
-            
-            // 2
-            let tipPercent = 0.15
-            let tipAmount = roundedBillAmount * tipPercent
-            let roundedTipAmount = (100 * tipAmount).rounded() / 100
-            
-            // 3
-            let totalAmount = roundedBillAmount + roundedTipAmount
-            
-            // Update UI
-            self.billAmountTextField.text = String(format: "%.2f", roundedBillAmount)
-            self.tipAmountLabel.text = String(format: "%.2f", roundedTipAmount)
-            self.totalAmountLabel.text = String(format: "%.2f", totalAmount)
+            self.calculate()
         }
+
     }
     
     
@@ -82,6 +94,7 @@ class ViewController: UIViewController {
     
 //    change tip percentage
     @IBAction func tipPercentageChanged(_ sender: UISegmentedControl) {
+        calculate()
     }
     
 //    reset input button

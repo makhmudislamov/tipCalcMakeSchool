@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    // 1
+    var isDefaultStatusBar = true
+    
+    // 2
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return isDefaultStatusBar ? .default : .lightContent
+    }
 
     // MARK: - View Lifecycle
     
@@ -51,7 +61,7 @@ class ViewController: UIViewController {
         outputCardView.layer.borderColor = theme.accentColor.cgColor
         
         tipAmountTitleLabel.textColor = theme.primaryTextColor
-        totalAmountTitleLabel.textColor = theme.primaryTextColor
+        totalAmountTitleLable.textColor = theme.primaryTextColor
         
         tipAmountLabel.textColor = theme.outputTextColor
         totalAmountLabel.textColor = theme.outputTextColor

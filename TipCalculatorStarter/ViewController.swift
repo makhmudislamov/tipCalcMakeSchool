@@ -32,6 +32,24 @@ class ViewController: UIViewController {
     //    BUTTON OUTLET
     @IBOutlet weak var resetButton: UIButton!
     
+    
+    func setupViews() {
+        
+        // styling header
+        headerView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        headerView.layer.shadowOpacity = 0.05
+        headerView.layer.shadowColor = UIColor.black.cgColor
+        headerView.layer.shadowRadius = 35
+        
+//        styling input card
+        inputCardView.layer.cornerRadius = 8
+        inputCardView.layer.masksToBounds = true
+        
+        outputCardView.layer.cornerRadius = 8
+        outputCardView.layer.masksToBounds = true
+        
+    }
+    
    
 //    CALCULATION LOGIC
     func calculate() {
@@ -85,6 +103,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupViews()
         
         billAmountTextField.calculateButtonAction = {
             self.calculate()

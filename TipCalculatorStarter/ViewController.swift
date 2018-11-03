@@ -45,6 +45,7 @@ class ViewController: UIViewController {
     
 //    CHANGING THEME FUNC
     func setTheme(isDark: Bool) {
+        
         let theme = isDark ? ColorTheme.dark : ColorTheme.light
         
         view.backgroundColor = theme.viewControllerBackgroundColor
@@ -67,6 +68,9 @@ class ViewController: UIViewController {
         totalAmountLabel.textColor = theme.outputTextColor
         
         resetButton.backgroundColor = theme.secondaryColor
+        
+        isDefaultStatusBar = theme.isDefaultStatusBar
+        setNeedsStatusBarAppearanceUpdate()
         
     }
     

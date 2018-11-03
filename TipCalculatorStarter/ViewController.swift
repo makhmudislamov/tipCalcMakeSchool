@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         
         guard let billAmountText = self.billAmountTextField.text,
             let billAmount = Double(billAmountText) else {
+                clear()
                 return
         }
         

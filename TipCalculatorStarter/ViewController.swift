@@ -33,6 +33,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     
     
+//    CHANGING THEME FUNC
+    func setTheme(isDark: Bool) {
+        
+    }
+    
+//    STYLING FUNCTION
     func setupViews() {
         
         // styling header

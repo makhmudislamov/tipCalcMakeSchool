@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     
    
-//    calc logic function
+//    CALCULATION LOGIC
     func calculate() {
         // dismiss keyboard
         if self.billAmountTextField.isFirstResponder {
@@ -72,6 +72,16 @@ class ViewController: UIViewController {
         self.totalAmountLabel.text = String(format: "%.2f", totalAmount)
     }
     
+    
+//    CLEARING FUNC LOGIC
+    func clear() {
+        
+        billAmountTextField.text = nil
+        tipPercentSegmentedControl.selectedSegmentIndex = 0
+        tipAmountLabel.text = "$0.00"
+        totalAmountLabel.text = "$0.00"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -99,7 +109,7 @@ class ViewController: UIViewController {
     
 //    reset input button
     @IBAction func resetButtonTapped(_ sender: Any) {
-        print("reset button tapped")
+        clear()
     }
     
     

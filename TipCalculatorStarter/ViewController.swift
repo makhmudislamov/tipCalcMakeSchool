@@ -35,6 +35,28 @@ class ViewController: UIViewController {
     
 //    CHANGING THEME FUNC
     func setTheme(isDark: Bool) {
+        let theme = isDark ? ColorTheme.dark : ColorTheme.light
+        
+        view.backgroundColor = theme.viewControllerBackgroundColor
+        
+        headerView.backgroundColor = theme.primaryColor
+        titleLabel.textColor = theme.primaryTextColor
+        
+        inputCardView.backgroundColor = theme.secondaryColor
+        
+        billAmountTextField.tintColor = theme.accentColor
+        tipPercentSegmentedControl.tintColor = theme.accentColor
+        
+        outputCardView.backgroundColor = theme.primaryColor
+        outputCardView.layer.borderColor = theme.accentColor.cgColor
+        
+        tipAmountTitleLabel.textColor = theme.primaryTextColor
+        totalAmountTitleLabel.textColor = theme.primaryTextColor
+        
+        tipAmountLabel.textColor = theme.outputTextColor
+        totalAmountLabel.textColor = theme.outputTextColor
+        
+        resetButton.backgroundColor = theme.secondaryColor
         
     }
     

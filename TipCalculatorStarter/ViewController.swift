@@ -46,8 +46,9 @@ class ViewController: UIViewController {
         inputCardView.layer.masksToBounds = true
         
 //        styling output card
+        outputCardView.layer.borderWidth = 1
         outputCardView.layer.cornerRadius = 8
-        outputCardView.layer.masksToBounds = true
+        outputCardView.layer.borderColor = UIColor.tcHotPink.cgColor
         
 //        styling reset button
         resetButton.layer.cornerRadius = 8

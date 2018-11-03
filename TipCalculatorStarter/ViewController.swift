@@ -36,7 +36,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
         billAmountTextField.calculateButtonAction = {
+            // dismiss keyboard if it's displayed
+            if self.billAmountTextField.isFirstResponder {
+                self.billAmountTextField.resignFirstResponder()
+            }
+            
             // 1
             guard let billAmountText = self.billAmountTextField.text,
 //                converting string to double

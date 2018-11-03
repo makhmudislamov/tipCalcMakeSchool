@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     //    INPUT CARD OUTLETS
     @IBOutlet weak var inputCardView: UIView!
-    @IBOutlet weak var billAmountTextField: UITextField!
+    @IBOutlet weak var billAmountTextField: BillAmountTextField!
     @IBOutlet weak var tipPercentSegmentedControl: UISegmentedControl!
     
     
@@ -35,6 +35,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 1
+        billAmountTextField.calculateButtonAction = {
+            // 2
+            print("calculate button tapped")
+        }
     }
     
     
@@ -54,6 +60,7 @@ class ViewController: UIViewController {
     
 //    reset input button
     @IBAction func resetButtonTapped(_ sender: Any) {
+        print("reset button tapped")
     }
     
     

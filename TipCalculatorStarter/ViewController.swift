@@ -164,11 +164,7 @@ class ViewController: UIViewController {
     //    IB ACTIONS
 //    change the theme
     @IBAction func themeToggled(_ sender: UISwitch) {
-        if sender.isOn {
-            print("switch toggled on")
-        } else {
-            print("switch toggled off")
-        }
+         setTheme(isDark: sender.isOn)
     }
     
 //    change tip percentage

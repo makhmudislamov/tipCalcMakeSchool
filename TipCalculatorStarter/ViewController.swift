@@ -36,10 +36,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 1
         billAmountTextField.calculateButtonAction = {
-            // 2
-            print("calculate button tapped")
+            guard let billAmountText = self.billAmountTextField.text
+                else { return }
+            
+            print("Bill Amount: \(billAmountText)")
         }
     }
     

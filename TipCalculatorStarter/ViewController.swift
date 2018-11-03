@@ -152,6 +152,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        default theme
+        setTheme(isDark: false)
         setupViews()
         
         billAmountTextField.calculateButtonAction = {

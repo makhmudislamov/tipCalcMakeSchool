@@ -1,13 +1,11 @@
-# Charity Center 
+# Tip Calulator 
 
-**Charity Center** is a web application that show a list of charity organizations - CRUD
+**Tip Calculator** is an IOS app that helps users to calculated their restaruant bill with tip included
 
 
 ## User Stories
-* [X] Users can view all charities (index)
-* [X] Users can create a charity (new/create)
-* [X] Users can view one charity (show)
-* [X] Users can delete a charity (destroy)
-* [X] Users can edit a charity (edit/update)
-* [X] Users can comment on charities (comments#create)
-* [X] Users can delete comments (comments#destroy)
+* [X] Users can make input (bill amount)
+* [X] Users can choose tip amount (in percentage) for calculation
+* [X] Users can see tip amount and total amount in dollars
+* [X] Users can reset the app
+* [X] Users can choose between light and dark themes
